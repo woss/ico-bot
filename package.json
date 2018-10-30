@@ -4,7 +4,7 @@
   "description": "A bot for running ICO on Byteball platform",
   "main": "ico.js",
   "scripts": {
-    "postinstall": "./node_modules/.bin/bower install",
+    "postinstall": "./node_modules/.bin/bower install --allow-root",
     "test": "make test",
     "test-client": "karma start",
     "build": "node ./node_modules/front-end-builder production",

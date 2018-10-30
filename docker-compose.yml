@@ -1,0 +1,17 @@
+version: '3'
+services:
+  sync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    command: 'sync.js 2>errlog'
+    ports: 
+      - "8088:8088"
+    volumes:
+      - './:/app'
+      - 'node_modules:/app/node_modules:rw'
+      - './data:/root/.config/ico-bot:rw'
+volumes:
+  sync-data:
+  node_modules:
